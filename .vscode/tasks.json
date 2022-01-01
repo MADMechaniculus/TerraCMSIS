@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        // "echo": true,
+        "reveal": "always",
+        // "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        // "clear": false
+    },
+    "options": {
+        "cwd": "${workspaceRoot}",
+        "shell": {
+            // "executable": "cmd.exe",
+            // "args": [ "/C" ]
+        }
+    },
+    "tasks": [
+        {
+            "label": "Clear",
+            "type": "shell",
+            "command": "rm -rd build/*",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Download",
+            "type": "shell",
+            "command": "openocd -f openocd.cfg -c \"init; reset halt; flash write_image erase ./build/TerraElectronicaBoard.hex; reset; exit;\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "Error:+(.*)+$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 1
+                }
+            }
+        },
+        {
+            "label": "All",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build",
+                "Download"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

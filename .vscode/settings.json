@@ -1,0 +1,10 @@
+{
+    "cortex-debug.JLinkGDBServerPath": "/opt/SEGGER/JLink/JLinkGDBServerCLExe",
+    "cortex-debug.openocdPath": "/usr/bin/openocd",
+    "files.associations": {
+        "main.h": "c",
+        "cmsis_os.h": "c",
+        "freertos.h": "c",
+        "lwip.h": "c"
+    }
+}

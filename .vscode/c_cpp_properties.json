@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "vscode_stm32_c_cpp_properties",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/Core/Inc/",
+                "${workspaceRoot}/Drivers/CMSIS/Include/",
+                "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32F2xx/Include/",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/api",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/apps/mqtt",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/core",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/core/ipv4",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/include",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/include/lwip",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/include/netif",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/include/posix",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/netif",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/src/netif/ppp",
+                "${workspaceRoot}/Middlewares/Third_Party/LwIP/system",
+                "${workspaceRoot}/Middlewares/Third_Party/FreeRTOS",
+                "${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source",
+                "${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
+            ],
+            "defines": [
+                "STM32F429xx"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
